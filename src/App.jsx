@@ -9,20 +9,24 @@ function App() {
   const isLoggedIn = false; 
 
   return (
-    <div className="centered-container">
-      <div className="content-box">
+    /* This wrapper will be used to center everything */
+    <div className="page-wrapper">
+      <div className="main-container">
         <h1>Lab Activity 3</h1>
-        {isLoggedIn ? <p>Welcome back!</p> : <p className="status">Please log in.</p>}
+        {isLoggedIn ? <p>Welcome back!</p> : <p>Please log in.</p>}
         
-        <div className="component-section">
+        <div className="component-group">
+          <h3>User List Component</h3>
           <UserList users={users} />
         </div>
 
-        <div className="component-section card">
+        <div className="component-group card">
+          <h3>Counter Component</h3>
           <Counter />
         </div>
 
-        <div className="component-section">
+        <div className="component-group">
+          <h3>User API Data</h3>
           <UserAPI />
         </div>
       </div>
