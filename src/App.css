@@ -21,10 +21,10 @@
 
 /* Style for the Counter box from your lab image */
 .card {
-  border: 1px solid #333;
+  border: 1px solid rgb(0, 0, 0);
   padding: 20px;
   border-radius: 4px;
-  background-color: #242424;
+  background-color: #aa4de9;
 }
 
 .component-group h3 {
