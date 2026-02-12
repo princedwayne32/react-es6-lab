@@ -1,33 +1,120 @@
-/* Center the content on the entire screen */
-.page-wrapper {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: flex-start; /* Aligns to top, but you can use 'center' for middle of screen */
-  min-height: 100vh;
-  background-color: #1a1a1a; /* Matches the dark theme in your screenshot */
-  color: white;
-  padding: 40px 20px;
-  font-family: sans-serif;
+/* Import a clean modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+body {
+  background-color: #f1f5f9; /* Soft background */
+  color: #334155;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
-/* Constrain the width so it looks organized */
-.main-container {
-  width: 100%;
-  max-width: 600px;
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h2 {
+  color: #1e293b;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+fieldset {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  padding: 25px;
+  background-color: #ffffff;
+}
+
+legend {
+  font-weight: 600;
+  padding: 0 12px;
+  color: #6366f1; /* Indigo accent */
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+label {
   display: flex;
   flex-direction: column;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+input, select {
+  padding: 10px 14px;
+  margin-top: 6px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+/* Interaction States */
+input:focus, select:focus {
+  outline: none;
+  border-color: #6366f1;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.grid-row-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 15px; }
+.grid-row-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 15px; }
+.grid-row-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 15px; }
+
+.radio-group {
+  margin-bottom: 20px;
+  display: flex;
   gap: 20px;
+  align-items: center;
 }
 
-/* Style for the Counter box from your lab image */
-.card {
-  border: 1px solid rgb(0, 0, 0);
-  padding: 20px;
-  border-radius: 4px;
-  background-color: #aa4de9;
+.radio-group p { font-weight: 600; margin: 0; font-size: 0.85rem; }
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+  margin-top: 10px;
 }
 
-.component-group h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
+.submit-btn:hover {
+  background-color: #4f46e5;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .grid-row-4, .grid-row-3, .grid-row-2 {
+    grid-template-columns: 1fr;
+  }
 }
